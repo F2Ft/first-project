@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>وجهني</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- الشريط الجانبي للقائمة -->
+    <aside class="sidebar">
+      <h2>القائمة</h2>
+      <ul>
+        <li onclick="showSection('about')">الرئيسية</li>
+        <li onclick="showSection('buildings')">المباني والكليات</li>
+        <li onclick="showSection('staff')">هيئة التدريس</li>
+        <li onclick="showSection('contact')">تواصل معنا</li>
+      </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="content">
+      
+      <!-- قسم "الرئيسية" -->
+      <section id="about" class="section active about-centered">
+        <h2><strong style="font-size: 30px;">مرحبا بك في موقع وجهني دليل مباني شطر الطالبات بجامعة الطائف</strong></h2>
+        <h3>يهدف هذا الموقع إلى تسهيل الوصول إلى مواقع المباني المختلفة داخل الحرم الجامعي، ومعرفة التخصصات المتوفرة في كل مبنى، بالإضافة إلى معلومات أعضاء هيئة التدريس وساعاتهم المكتبية.</h3>
+      </section>
+
+      <!-- قسم "المباني والكليات" -->
+      <section id="buildings" class="section">
+        <h2>المباني والكليات</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>رقم المبنى</th>
+              <th>الكلية / الاستخدام</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>التلفزيون التعليمي</td></tr>
+            <tr><td>2</td><td>المدخل الغربي</td></tr>
+            <tr><td>3</td><td>الإدارة الطبية</td></tr>
+            <tr><td>4</td><td>فصول دراسية (قسم كلية العلوم)</td></tr>
+            <tr><td>5</td><td>معامل كلية العلوم</td></tr>
+            <tr><td>6</td><td>فصول دراسية</td></tr>
+            <tr><td>7</td><td>فصول دراسية + المسرح الجامعي + كلية الحاسبات</td></tr>
+            <tr><td>8</td><td>المكتبة المركزية</td></tr>
+            <tr><td>9</td><td>معامل كلية العلوم (قسم الفيزياء)</td></tr>
+            <tr><td>10</td><td>مكاتب هيئة التدريس (عمادات وإدارات مساندة)</td></tr>
+            <tr><td>11</td><td>فصول دراسية (كلية إدارة الأعمال)</td></tr>
+            <tr><td>12</td><td>كلية الحاسب الآلي والمعامل</td></tr>
+            <tr><td>13</td><td>كلية التصاميم والاقتصاد المنزلي</td></tr>
+            <tr><td>14</td><td>المطعم الجامعي</td></tr>
+            <tr><td>15</td><td>عمادات الدراسات الجامعية</td></tr>
+            <tr><td>16</td><td>المدخل الشرقي (عيادات - المول الخارجي)</td></tr>
+            <tr><td>17</td><td>كلية إدارة الأعمال (عمادة التعلم الإلكتروني والتسجيل)</td></tr>
+            <tr><td>18</td><td>فصول دراسية (كلية طب الأسنان)</td></tr>
+            <tr><td>19</td><td>مركز الطفولة النموذجي</td></tr>
+            <tr><td>20</td><td>الأنشطة الطلابية</td></tr>
+            <tr><td>21</td><td>الصيدلية (معامل كلية الطب)</td></tr>
+            <tr><td>22</td><td>الملاعب</td></tr>
+            <tr><td>23</td><td>كلية الطب</td></tr>
+            <tr><td>24</td><td>فصول دراسية (مركز اللغة الإنجليزية)</td></tr>
+            <tr><td>25</td><td>كلية التربية</td></tr>
+            <tr><td>26</td><td>كلية الآداب</td></tr>
+            <tr><td>27</td><td>كلية الشريعة والأنظمة</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- قسم "هيئة التدريس" -->
+      <section id="staff" class="section">
+        <h2>هيئة التدريس</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>الاسم</th>
+              <th>الأيام</th>
+              <th>الساعات المكتبية</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>د.نوال السفياني</td><td>الأحد والثلاثاء</td><td>10:00 - 12:00</td></tr>
+            <tr><td>د.خلودالثبيتي</td><td>الإثنين</td><td>11:00 - 1:00</td></tr>
+            <tr><td>د. ساره الردادي</td><td>الأربعاء</td><td>9:00 - 11:00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- قسم "تواصل معنا" -->
+      <section id="contact" class="section">
+        <h2>تواصل معنا</h2>
+        <form action="submit.php" method="POST">
+          <label for="name">الاسم:</label>
+          <input type="text" id="name" name="name" required><br><br>
+          <label for="email">البريد الإلكتروني:</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="message">رسالتك:</label><br>
+          <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+          <input type="submit" value="إرسال">
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2025</p>
+  </footer>
+</body>
+</html>
